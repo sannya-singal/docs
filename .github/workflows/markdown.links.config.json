@@ -36,6 +36,9 @@
         {
             "pattern": "(.*)localhost.localstack.cloud(.*)"
         }
+        {
+            "pattern": "https://localhost:45139/"
+        }
     ],
     "httpHeaders": [
         {
