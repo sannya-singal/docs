@@ -8,6 +8,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
+        "terraform_test_suite": true,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -19,6 +20,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -29,7 +31,8 @@
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": true,
-        "external_test_suite": false,
+        "external_test_suite": true,
+        "terraform_test_suite": true,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -41,6 +44,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -52,6 +56,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
+        "terraform_test_suite": true,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -63,6 +68,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -74,6 +80,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -84,7 +91,8 @@
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": true,
-        "external_test_suite": false,
+        "external_test_suite": true,
+        "terraform_test_suite": true,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -96,6 +104,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -107,6 +116,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -118,6 +128,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -129,6 +140,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -139,7 +151,8 @@
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": true,
-        "external_test_suite": false,
+        "external_test_suite": true,
+        "terraform_test_suite": true,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -151,6 +164,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -162,6 +176,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -173,6 +188,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -183,7 +199,8 @@
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": true,
-        "external_test_suite": false,
+        "external_test_suite": true,
+        "terraform_test_suite": true,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -195,6 +212,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -206,6 +224,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -217,6 +236,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -228,6 +248,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -239,6 +260,7 @@
         "availability": "",
         "internal_test_suite": false,
         "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -250,6 +272,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
+        "terraform_test_suite": true,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -291,8 +314,8 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-35a14175]",
-            "test": "test_change_password[user-35a14175]",
+            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-a2147b16]",
+            "test": "test_change_password[user-a2147b16]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -301,8 +324,8 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-4e1752ef@example.com]",
-            "test": "test_change_password[user-4e1752ef@example.com]",
+            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-bcd1790a@example.com]",
+            "test": "test_change_password[user-bcd1790a@example.com]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -513,8 +536,8 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-35a14175]",
-            "test": "test_change_password[user-35a14175]",
+            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-a2147b16]",
+            "test": "test_change_password[user-a2147b16]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -523,8 +546,8 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-4e1752ef@example.com]",
-            "test": "test_change_password[user-4e1752ef@example.com]",
+            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-bcd1790a@example.com]",
+            "test": "test_change_password[user-bcd1790a@example.com]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -657,8 +680,8 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-35a14175]",
-            "test": "test_change_password[user-35a14175]",
+            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-a2147b16]",
+            "test": "test_change_password[user-a2147b16]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -667,8 +690,8 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-4e1752ef@example.com]",
-            "test": "test_change_password[user-4e1752ef@example.com]",
+            "node_id": "LocalStack Pro: tests/integration/test_cognito.py::TestCognito::test_change_password[user-bcd1790a@example.com]",
+            "test": "test_change_password[user-bcd1790a@example.com]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",

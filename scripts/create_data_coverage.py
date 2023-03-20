@@ -215,6 +215,7 @@ def _init_metric_recorder(operations_dict: dict):
             "availability": availability,
             "internal_test_suite": False,
             "external_test_suite": False,
+            "terraform_test_suite": False,
             "aws_validated": False,
             "snapshot_tested": False,
             "snapshot_skipped": "",
@@ -269,6 +270,7 @@ def aggregate_recorded_raw_data(
     # contains internal + external calls
     recorded_data = _init_metric_recorder(operations)
     pathlist = Path(base_dir).rglob("*.csv")
+    print(f"checking service {service_of_interest}")
     for path in pathlist:
         test_source = path.stem
         # print(f"checking {str(path)}")
@@ -292,10 +294,10 @@ def aggregate_recorded_raw_data(
                     #    f"---> operation {metric.get('service')}.{metric.get('operation')} was not found"
                     #)
                     continue
+                
 
                 internal_test = False
                 external_test = False
-
                 if test_source.startswith("community"):
                     test_node_origin = "LocalStack Community"
                     internal_test = True
@@ -307,6 +309,14 @@ def aggregate_recorded_raw_data(
                 else:
                     external_test = True
 
+                if external_test and metric.get("response_code") in ["500", "501"]:
+                    # some external tests (e.g seen for terraform) seem to succeed even though single operation calls fail
+                    # we do not include those are "passed tests"
+                    print(f"skipping {service}.{op_name}: response_code {metric.get('response_code')} ({test_source})")
+                    continue 
+
+                terraform_validated = True if test_source.startswith("terraform") else False
+
                 if internal_test and not op_record.get("internal_test_suite"):
                     op_record["internal_test_suite"] = True
                 if external_test and not op_record.get("external_test_suite"):
@@ -315,7 +325,7 @@ def aggregate_recorded_raw_data(
                 aws_validated = (
                     str(metric.get("aws_validated", "false")).lower() == "true"
                 )
-
+                
                 # snapshot_tested is set if the test uses the snapshot-fixture + does not skip everything 
                 #   (pytest.marker.skip_snapshot_verify)
                 snapshot_tested = (
@@ -334,6 +344,8 @@ def aggregate_recorded_raw_data(
                 if not op_record.get("aws_validated") and aws_validated:
                     op_record["aws_validated"] = True
 
+                if not op_record.get("terraform_test_suite") and terraform_validated:
+                    op_record["terraform_test_suite"] = True
                 # test details currently only considered for internal test suite
                 # TODO might change when we include terraform test results
                 if not internal_test:
